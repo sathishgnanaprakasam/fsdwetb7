@@ -1,6 +1,6 @@
 # Doubt Session
 
-- [ ] flexbox
+- [x] flexbox
 - [ ] grid
 - [ ] media query
 - [ ] JS loops
