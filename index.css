@@ -1,0 +1,42 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: start; /* center the items horizontally */
+    align-items: center; /* center the items vertically */
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    list-style-type: none;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.home {
+    order: 1;
+    flex-grow: 2;
+}
+
+.services {
+    order: 2;
+    flex-grow: 1;
+}
+
+.contact {
+    order: 3;
+    flex-grow: 1;
+}
+
+.about {
+    order: 4;
+    flex-grow: 1;
+}
