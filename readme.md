@@ -2,7 +2,7 @@
 
 - [x] flexbox
 - [x] grid
-- [ ] media query
+- [x] media query
 - [x] JS loops
 - [x] arrow functions
 - [x] hoisting and scope

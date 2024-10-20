@@ -1,0 +1,36 @@
+/* for mobile devices */
+.menuList {
+    display: none;
+}
+
+.menuList li a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+}
+
+.menuList li a:hover{
+    color: #f00;
+}
+
+.menuList li {
+    list-style-type: none;
+}
+
+.menuList {
+    margin: 0;
+    padding: 0;
+}
+
+/* for desktop devices */
+@media screen and (min-width: 992px){
+    .menuList {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1em;
+    }
+
+    #menuIcon {
+        display: none;
+    }
+}
