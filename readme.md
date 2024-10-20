@@ -14,3 +14,7 @@
 ## Grid
 
 - It is a two-dimensional layout system, meaning it can handle both columns and rows, unlike flexbox which is largely a 1D system.
+
+# 13 Landing Page using HTML and TailwindCSS
+
+- [ ] Create a landing page using HTML and TailwindCSS
