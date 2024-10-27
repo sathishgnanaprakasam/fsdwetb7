@@ -1,19 +1,3 @@
-// window.document.title = 'Hello World';
+// let domParagraph = document.getElementById('domID');
 
-// console.log();
-
-// let container = document.getElementsByClassName('container');
-
-// for (let i = 0; i < container.length; i++) {
-//     console.log(container[i]);
-// }
-
-// Object.keys(container).forEach((key) => {
-//     console.log(container[key]);
-// });
-
-// console.log(document.getElementsByTagName('p')[0].textContent.split(' '));
-
-document.getElementsByClassName('container')[0].style.color = 'blue';
-
-// document.getElementsByClassName('container')[0].classList.add('blueText');
+// console.log(domParagraph.textContent.split('\n')[0]);
