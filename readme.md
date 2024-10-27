@@ -27,8 +27,8 @@
 
 - [x] What's the DOM and DOM Manipulation
 - [x] get element by Class, tagname & ID
-- [ ] Append & Appendchild
-- [ ] Selecting and Manipulating Elements - innerHTML, textContent
+- [x] Append & Appendchild
+- [x] Selecting and Manipulating Elements - innerHTML, textContent, createElement, removeChild, remove, classList
 - [ ] document.queryselector & document.queryselectorAll
 
 ## What's the DOM and DOM Manipulation
