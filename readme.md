@@ -17,4 +17,4 @@
 
 # 13 Landing Page using HTML and TailwindCSS
 
-- [ ] Create a landing page using HTML and TailwindCSS
+- [x] Create a landing page using HTML and TailwindCSS
