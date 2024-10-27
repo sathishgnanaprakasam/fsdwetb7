@@ -1,3 +1,23 @@
 .blueText {
     color: blue;
 }
+
+.redText {
+    color: red;
+}
+
+.greenText {
+    color: green;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+#methods:hover {
+    background-color: yellow;
+}
