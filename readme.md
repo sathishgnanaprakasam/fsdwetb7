@@ -99,3 +99,15 @@ Example: `document.querySelectorAll('.class')`
 - [ ] Create the following blog post structure using DOM Manipulation.
 
 url: https://www.guvi.in/blog/prerequisites-for-reactjs/
+
+## 16 Java Script Events
+
+- [x] What are Events
+
+## What are Events
+
+- Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired.
+
+- In other words, in web interfaces, events are actions that happens during the interaction with the web page by the user.
+
+Examples: Click, Mouseover, Mouseout, Keydown, Keyup, etc.
