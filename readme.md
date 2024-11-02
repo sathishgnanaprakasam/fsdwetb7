@@ -111,3 +111,24 @@ url: https://www.guvi.in/blog/prerequisites-for-reactjs/
 - In other words, in web interfaces, events are actions that happens during the interaction with the web page by the user.
 
 Examples: Click, Mouseover, Mouseout, Keydown, Keyup, etc.
+
+Exercise:
+
+- Create a div element as a card with the following details:
+
+  - Name: John Doe
+  - Age: 30
+  - Designation: Web Developer
+  - Salary: $1000
+  - City: New York
+  - Country: USA
+
+- Change the background color of the card when the mouse hovers over the card.
+- Reset the background color of the card when the mouse leaves the card.
+
+### mouseover, mouseout vs mouseenter, mouseleave
+
+- `mouseover`: It is fired when the mouse pointer enters the element and bubbles up.
+- `mouseout`: It is fired when the mouse pointer leaves the element and bubbles up.
+- `mouseenter`: It is fired when the mouse pointer enters the element itself, not any of its children and does not bubble up.
+- `mouseleave`: It is fired when the mouse pointer leaves the element itself, not any of its children and does not bubble up.
