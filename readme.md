@@ -132,3 +132,28 @@ Exercise:
 - `mouseout`: It is fired when the mouse pointer leaves the element and bubbles up.
 - `mouseenter`: It is fired when the mouse pointer enters the element itself, not any of its children and does not bubble up.
 - `mouseleave`: It is fired when the mouse pointer leaves the element itself, not any of its children and does not bubble up.
+
+### type of events
+
+- Mouse Events
+  - click
+  - dblclick
+  - mouseover
+  - mouseout
+  - mouseenter
+  - mouseleave
+  - mousedown
+  - mouseup
+  - mousemove
+  - contextmenu
+- Keyboard Events
+  - keydown
+  - keyup
+  - keypress
+  - input
+- Form Events
+  - submit
+  - reset
+  - change
+  - focus
+  - blur
