@@ -1,9 +1,19 @@
-let card = document.querySelector('.card');
+let card = document.querySelector('#card');
 
-card.addEventListener('mouseenter', () => {
-    card.style.backgroundColor = 'lightgreen';
+card.addEventListener('click', () => {
+    console.log('Card clicked');
 });
 
-card.addEventListener('mouseleave', () => {
-    card.style.backgroundColor = 'lightblue';
+let ln = document.querySelector('#location');
+
+ln.addEventListener('click', (e) => {
+    e.stopPropagation();
+    console.log('Location clicked');
+});
+
+let city = document.querySelector('.city');
+
+city.addEventListener('click', (e) => {
+    e.stopPropagation();
+    console.log('City clicked');
 });

@@ -1,6 +1,4 @@
-
-
-.card {
+#card {
     margin: 10px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -9,7 +7,7 @@
     background-color: lightblue;
 }
 
-.card {
+#card {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -17,7 +15,7 @@
     align-items: center;
 }
 
-.location {
+#location {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
