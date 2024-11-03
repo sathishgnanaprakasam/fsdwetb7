@@ -82,3 +82,15 @@ squares.forEach((square, index) => {
     });
 });
 
+let restart = document.querySelector('.restart');
+
+restart.addEventListener('click', () => {
+    squares.forEach(square => {
+        square.textContent = '';
+    });
+
+    values = new Array(9).fill(null);
+    player = 'X';
+    winner = null;
+    status.innerHTML = `Next player: ${player}`;
+});
