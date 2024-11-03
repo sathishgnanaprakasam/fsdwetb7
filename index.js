@@ -46,8 +46,6 @@ let winningLines = [
 ];
 let winner = null;
 
-console.log(values);
-
 function checkWinner(values, player) {
     for (let i = 0; i < winningLines.length; i++) {
         let [a, b, c] = winningLines[i];
@@ -64,7 +62,6 @@ squares.forEach((square, index) => {
         if (values[index] === null && !winner) {
             square.textContent = player;
             values[index] = player;
-            console.log(values);
 
             // check if the player has won
             winner = checkWinner(values, player);
@@ -77,6 +74,11 @@ squares.forEach((square, index) => {
             player = player === 'X' ? 'O' : 'X';
 
             status.innerHTML = `Next player: ${player}`;
+
+            if (values.indexOf(null) === -1) {
+                status.innerHTML = 'Status: Game Draw';
+            }
         }
     });
 });
+
