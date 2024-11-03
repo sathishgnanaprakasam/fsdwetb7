@@ -1,159 +1,46 @@
-# Doubt Session
+# Tic Tac Toe Game
 
-- [x] flexbox
-- [x] grid
-- [x] media query
-- [x] JS loops
-- [x] arrow functions
-- [x] hoisting and scope
+## Description
 
-## Flexbox
+This is a simple Tic Tac Toe game that can be played by two players. The game is played on a 3x3 grid. The players take turns to place their mark (either X or O) on the grid. The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins the game. If the grid is full and no player has won, the game is a draw.
 
-- It is a one-dimensional layout method for laying out items in rows or columns.
+## How to Play
 
-## Grid
+1. Run the game by executing the `index.html` file in a web browser.
+2. Enter the names of the two players.
+3. Click on the grid to place your mark (X or O).
+4. The game will automatically switch turns between the two players.
+5. The game will display a message when a player wins or when the game is a draw.
+6. Click the "Restart" button to start a new game.
 
-- It is a two-dimensional layout system, meaning it can handle both columns and rows, unlike flexbox which is largely a 1D system.
+## Features
 
-# 13 Landing Page using HTML and TailwindCSS
+- Two-player game
+- Automatic turn switching
+- Win detection
+- Draw detection
+- Restart button
 
-- [x] Create a landing page using HTML and TailwindCSS
+## Technologies Used
 
-# 14 Landing Page using HTML and TailwindCSS
+- HTML
+- CSS
+- JavaScript (DOM manipulation)
 
-- [x] Create a landing page using HTML and TailwindCSS
+## Screenshots
 
-# 15 DOM Fundamentals
+## How to Use
 
-- [x] What's the DOM and DOM Manipulation
-- [x] get element by Class, tagname & ID
-- [x] Append & Appendchild
-- [x] Selecting and Manipulating Elements - innerHTML, textContent, createElement, removeChild, remove, classList
-- [x] document.queryselector & document.queryselectorAll
+1. Clone the repository using the following command:
 
-## What's the DOM and DOM Manipulation
+```bash
+git clone repo_url
+```
 
-- The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.
+2. Navigate to the project directory:
 
-## get element by Class, tagname & ID
+```bash
+cd tic-tac-toe
+```
 
-- `document.getElementByClassName('class')`
-- `document.getElementByTagName('tag')`
-- `document.getElementByID('id')`
-
-## Append & Appendchild
-
-- `element.append()`
-- `element.appendChild()`
-
-## Selecting and Manipulating Elements
-
-- `innerHTML`: It sets or returns the HTML content (inner HTML) of an element.
-
-Example: `document.getElementById('id').innerHTML = 'Hello World'`
-
-- `textContent`: It sets or returns the text content of the specified node, and all its descendants.
-
-Example: `document.getElementById('id').textContent = 'Hello World'`
-
-- `createElement`: It creates an Element Node with the specified name.
-
-Example: `document.createElement('div')`
-
-- `removeChild`: It removes a specified child node of the specified element.
-
-Example: `document.getElementById('id').removeChild('child')`
-
-- `remove`: It removes the specified element.
-
-Example: `document.getElementById('id').remove()`
-
-- `classList`: It returns the class name(s) of an element.
-
-Example: `document.getElementById('id').classList`
-
-## document.queryselector & document.queryselectorAll
-
-- `document.querySelector()`: It returns the first element that matches a specified CSS selector(s) in the document.
-
-Example: `document.querySelector('.class')`
-
-- `document.querySelectorAll()`: It returns all elements in the document that matches a specified CSS selector(s), as a static NodeList object.
-
-Example: `document.querySelectorAll('.class')`
-
-## Exercises/Homeworks
-
-- [ ] Create a simple to-do list using HTML, CSS, and JavaScript. Use DOM manipulation to add, delete, and update the to-do list.
-
-- [ ] Create the following table using DOM manipulation.
-
-| Name            | Age | Designation      | Salary | City       | Country |
-| --------------- | --- | ---------------- | ------ | ---------- | ------- |
-| John Doe        | 30  | Web Developer    | $1000  | New York   | USA     |
-| Jane Doe        | 25  | UI/UX Designer   | $800   | California | USA     |
-| Alex Smith      | 35  | Project Manager  | $1200  | Texas      | USA     |
-| Michael Johnson | 40  | Business Analyst | $1500  | Florida    | USA     |
-| Sarah Johnson   | 28  | HR Manager       | $900   | Washington | USA     |
-
-- [ ] Create the following blog post structure using DOM Manipulation.
-
-url: https://www.guvi.in/blog/prerequisites-for-reactjs/
-
-## 16 Java Script Events
-
-- [x] What are Events
-
-## What are Events
-
-- Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired.
-
-- In other words, in web interfaces, events are actions that happens during the interaction with the web page by the user.
-
-Examples: Click, Mouseover, Mouseout, Keydown, Keyup, etc.
-
-Exercise:
-
-- Create a div element as a card with the following details:
-
-  - Name: John Doe
-  - Age: 30
-  - Designation: Web Developer
-  - Salary: $1000
-  - City: New York
-  - Country: USA
-
-- Change the background color of the card when the mouse hovers over the card.
-- Reset the background color of the card when the mouse leaves the card.
-
-### mouseover, mouseout vs mouseenter, mouseleave
-
-- `mouseover`: It is fired when the mouse pointer enters the element and bubbles up.
-- `mouseout`: It is fired when the mouse pointer leaves the element and bubbles up.
-- `mouseenter`: It is fired when the mouse pointer enters the element itself, not any of its children and does not bubble up.
-- `mouseleave`: It is fired when the mouse pointer leaves the element itself, not any of its children and does not bubble up.
-
-### type of events
-
-- Mouse Events
-  - click
-  - dblclick
-  - mouseover
-  - mouseout
-  - mouseenter
-  - mouseleave
-  - mousedown
-  - mouseup
-  - mousemove
-  - contextmenu
-- Keyboard Events
-  - keydown
-  - keyup
-  - keypress
-  - input
-- Form Events
-  - submit
-  - reset
-  - change
-  - focus
-  - blur
+3. Run the game by opening the `index.html` file in a web browser.
