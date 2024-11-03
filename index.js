@@ -1,24 +1,82 @@
 let squares = document.querySelectorAll('.square');
+let status = document.querySelector('.status');
 
-// consider the squares to be 3 x 3 grid
+function createBoard() {
+
+
+
+    // consider the squares to be 3 x 3 grid
+    squares.forEach((square, index) => {
+        // first row
+        if (index < 3) {
+            square.style.borderTop = 'none';
+        }
+
+        // last row
+        if (index > 5) {
+            square.style.borderBottom = 'none';
+        }
+
+        // first column
+        if (index % 3 === 0) {
+            square.style.borderLeft = 'none';
+        }
+
+        // last column
+        if (index % 3 === 2) {
+            square.style.borderRight = 'none';
+        }
+    });
+}
+
+createBoard();
+
+let values = new Array(9).fill(null);
+let player = 'X';
+let winningLines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+
+];
+let winner = null;
+
+console.log(values);
+
+function checkWinner(values, player) {
+    for (let i = 0; i < winningLines.length; i++) {
+        let [a, b, c] = winningLines[i];
+
+        if (values[a] === player && values[b] === player && values[c] === player) {
+            return player;
+        }
+    }
+    return null;
+}
+
 squares.forEach((square, index) => {
-    // first row
-    if (index < 3) {
-        square.style.borderTop = 'none';
-    }
+    square.addEventListener('click', () => {
+        if (values[index] === null && !winner) {
+            square.textContent = player;
+            values[index] = player;
+            console.log(values);
 
-    // last row
-    if (index > 5) {
-        square.style.borderBottom = 'none';
-    }
+            // check if the player has won
+            winner = checkWinner(values, player);
 
-    // first column
-    if (index % 3 === 0) {
-        square.style.borderLeft = 'none';
-    }
+            if (winner) {
+                status.innerHTML = `Winner: ${winner}`;
+                return;
+            }
 
-    // last column
-    if (index % 3 === 2) {
-        square.style.borderRight = 'none';
-    }
-})
+            player = player === 'X' ? 'O' : 'X';
+
+            status.innerHTML = `Next player: ${player}`;
+        }
+    });
+});

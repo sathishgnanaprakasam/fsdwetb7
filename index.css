@@ -11,7 +11,7 @@
     flex-direction: row;
 }
 
-.container {
+.container .board {
     display: flex;
     flex-direction: column;
     justify-content: center;
