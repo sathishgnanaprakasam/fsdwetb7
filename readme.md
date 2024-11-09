@@ -4,9 +4,9 @@
 
 [x] Event Loop
 [x] Callback & Callback Hell
-[ ] Promise & Promise Chaining
+[x] Promise & Promise Chaining
 [ ] Async await
-[ ] Session reference - http://latentflip.com/loupe/
+[x] Session reference - http://latentflip.com/loupe/
 
 ## Event Loop
 
@@ -29,3 +29,17 @@ Exercise:
 ## Callback Hell
 
 - Callback hell is a situation where multiple nested callbacks are used to handle asynchronous operations.
+
+## Promise
+
+- A promise is an object that represents the eventual completion or failure of an asynchronous operation.
+
+States:
+
+- Pending: The initial state of a promise.
+- Fulfilled: The state of a promise when it is resolved.
+- Rejected: The state of a promise when it is not resolved.
+
+## Doubts
+
+- Manage CSS using JS (Two ways)
