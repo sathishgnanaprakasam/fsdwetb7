@@ -1,37 +1,23 @@
-const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        // fetch data
+let url = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
 
-        // do something with the data
+function fetchMeaning(word) {
+    // make an api call to fetch the meaning of the word
+    // using XHR: XMLHttpRequest
 
-        let data = 10;
-        let successFactor = false;
+    // create an object of XMLHttpRequest
+    const xhr = new XMLHttpRequest();
 
-        // take a decision based on whether the operation is successful or failure
-        if (successFactor) {
-            resolve(data);
-        } else {
-            reject('Network error in completing the operation!');
-        }
-    }, 3000);
-});
+    // open a connection
+    xhr.open('GET', `${url}${word}`, true);
 
-promise
-    .then((data) => {
-        console.log('operation completed!');
-        console.log('data received:', data);
-    })
-    .catch((error) => {
-        console.log('operation failed!');
-        console.log('Error:', error);
-    })
-    .then(() => {
-        console.log('I will execute no matter success or failure')
-        throw new Error('something unexpected happened');
-    })
-    .then(() => {
-        console.log('I will execute too!');
-    })
-    .catch((error) => {
-        console.log(error);
-    })
+    // process the response
+    xhr.onreadystatechange = function () {
+        console.log(JSON.parse(xhr.responseText));
+    }
+
+    // send the request
+    xhr.send();
+}
+
+let word = 'apple';
+fetchMeaning(word);

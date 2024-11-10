@@ -5,7 +5,7 @@
 [x] Event Loop
 [x] Callback & Callback Hell
 [x] Promise & Promise Chaining
-[ ] Async await
+[x] Async await
 [x] Session reference - http://latentflip.com/loupe/
 
 ## Event Loop
@@ -45,6 +45,7 @@ States:
 ## Doubts
 
 - Manage CSS using JS (Two ways)
+- File Copying using Promises
 
 ## Promise and Promise Chaining
 
