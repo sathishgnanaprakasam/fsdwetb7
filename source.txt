@@ -1,0 +1,2 @@
+This is a souce File, whose content will be copied to the destination file.
+This is to test the file copy operation.
