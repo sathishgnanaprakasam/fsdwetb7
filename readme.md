@@ -33,6 +33,8 @@ Exercise:
 ## Promise
 
 - A promise is an object that represents the eventual completion or failure of an asynchronous operation.
+- Promises executes asynchronously.
+- The operations inside the promise are executed in the order they are defined or called.
 
 States:
 
@@ -43,3 +45,19 @@ States:
 ## Doubts
 
 - Manage CSS using JS (Two ways)
+
+## Promise and Promise Chaining
+
+- Promise chaining is a technique used to chain multiple promises together.
+- The then() method is used to chain promises.
+- The catch() method is used to handle errors in promises.
+- The chains of promises are executed in the order they are defined or called in synchronous order.
+
+## Callback vs Promise
+
+- Callbacks are used to handle asynchronous operations in JavaScript.
+- Promises are used to handle asynchronous operations in JavaScript.
+- Callbacks are difficult to manage when multiple asynchronous operations are involved.
+- Promises are easier to manage when multiple asynchronous operations are involved.
+- Callbacks are prone to callback hell.
+- Promises are less prone to callback hell.
