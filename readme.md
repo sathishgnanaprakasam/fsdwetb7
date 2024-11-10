@@ -62,3 +62,15 @@ States:
 - Promises are easier to manage when multiple asynchronous operations are involved.
 - Callbacks are prone to callback hell.
 - Promises are less prone to callback hell.
+
+## Async Await
+
+- Async/await is a new way to write asynchronous code in JavaScript.
+- Async/await is a combination of promises and generators.
+- Await will pause the execution of the function until the promise is resolved.
+- Async/await makes the code look synchronous.
+
+## Error Handling in Async Await
+
+- Use try/catch block to handle errors in async/await.
+- the reason to handle the error using try/catch is to not let the application crash but to handle the error and continue the execution.
