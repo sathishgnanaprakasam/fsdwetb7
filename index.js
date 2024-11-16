@@ -1,36 +1,31 @@
-const readline = require('readline');
-const fs = require('fs');
+async function loadTodos() {
+    // Get the reference of the todoList div
+    const todoList = document.querySelector('.todoList');
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+    // make an api call and fetch the data (list of all todos) from the mockapi url
+    const response = await fetch(`https://67382aa24eb22e24fca70e92.mockapi.io/todos`);
+    const todos = await response.json();
 
-function copyFile(source, destination) {
-    try {
-        fs.copyFileSync(source, destination);
-        return true;
-    } catch (error) {
-        return false;
-    }
+    todoList.innerHTML = '';
+
+    // Create an unordered list
+    const ulist = document.createElement('ul');
+
+    // loop through the data
+    // for every todo item in the data
+    todos.forEach(todo => {
+        // create a html list item
+        const listItem = document.createElement('li');
+
+        // add the content - title of the todo item to the html list item
+        listItem.textContent = todo.title;
+
+        // append the list item to the unordered list
+        ulist.appendChild(listItem);
+    });
+
+    // after exiting the loop, append the unordered list to the html todoList div
+    todoList.appendChild(ulist);
 }
 
-const promise = new Promise((resolve, reject) => {
-    rl.question('Enter the destination file name: ', (filename) => {
-        if (copyFile('source.txt', filename)) {
-            resolve();
-        } else {
-            reject();
-        }
-
-        rl.close();
-    });
-});
-
-promise
-    .then(() => {
-        console.log('File copied successfully');
-    })
-    .catch(() => {
-        console.log('Error copying file');
-    });
+loadTodos();
