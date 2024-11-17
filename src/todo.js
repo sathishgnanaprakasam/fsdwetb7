@@ -1,8 +1,8 @@
 const container = document.querySelector('.container');
 
 async function loadTodo(id) {
-    const response = await fetch(`https://67382aa24eb22e24fca70e92.mockapi.io/todos/${id}`);
-    const todo = await response.json();
+    const lstodos = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : [];
+    const todo = lstodos.find(todo => todo.id == id);
 
     const title = document.createElement('h1');
     title.textContent = todo.title;

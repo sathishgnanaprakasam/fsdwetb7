@@ -2,9 +2,8 @@ async function loadTodos() {
     // Get the reference of the todoList div
     const todoList = document.querySelector('.todoList');
 
-    // make an api call and fetch the data (list of all todos) from the mockapi url
-    const response = await fetch(`https://67382aa24eb22e24fca70e92.mockapi.io/todos`);
-    const todos = await response.json();
+    // get the todos from the localStorage
+    const todos = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : [];
 
     todoList.innerHTML = '';
 
@@ -56,14 +55,19 @@ addForm.addEventListener('submit', async (e) => {
     };
 
     try {
-        // make an api call to add the todo item
-        await fetch(`https://67382aa24eb22e24fca70e92.mockapi.io/todos`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(todo)
-        });
+        // get the todos from the localStorage
+        let lstodos = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : [];
+
+        // get the id of the last todo item
+        const lastTodo = lstodos[lstodos.length - 1];
+
+        todo.id = lastTodo ? lastTodo.id + 1 : 1;
+
+        // add the new todo to the todos array
+        lstodos.push(todo);
+
+        // set the todos to the localStorage
+        localStorage.setItem('todos', JSON.stringify(lstodos));
 
         // clear the form
         addForm.reset();
