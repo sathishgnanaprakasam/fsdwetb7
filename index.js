@@ -34,7 +34,46 @@ async function loadTodos() {
 
     // after exiting the loop, append the unordered list to the html todoList div
     todoList.appendChild(ulist);
-    console.log(ulist);
 }
 
 loadTodos();
+
+// get the reference of the addForm
+const addForm = document.querySelector('.addForm');
+
+addForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // get the title and description from the form using the form elements
+    const title = addForm.todoTitle.value;
+    const description = addForm.todoDescription.value;
+    const isCompleted = addForm.todoCompleted.checked;
+
+    const todo = {
+        title,
+        description,
+        isCompleted
+    };
+
+    try {
+        // make an api call to add the todo item
+        await fetch(`https://67382aa24eb22e24fca70e92.mockapi.io/todos`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(todo)
+        });
+
+        // clear the form
+        addForm.reset();
+
+        alert('Todo added successfully');
+
+        // redirect the user to the home page
+        // window.location.href = '/index.html';
+        loadTodos();
+    } catch (error) {
+        alert('Failed to add todo');
+    }
+});

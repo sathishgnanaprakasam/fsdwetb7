@@ -25,6 +25,11 @@ async function loadTodo(id) {
     const editButton = document.createElement('button');
     editButton.textContent = 'Edit';
 
+    // add event listener to the edit button
+    editButton.addEventListener('click', () => {
+        window.location.href = `/src/edit.html?id=${id}`;
+    });
+
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
     deleteButton.style.marginLeft = '20px';
