@@ -14,18 +14,27 @@ async function loadTodos() {
     // loop through the data
     // for every todo item in the data
     todos.forEach(todo => {
+        // create an anchor tag
+        const anchor = document.createElement('a');
+
+        // set the href attribute of the anchor tag
+        anchor.href = `./src/todo.html?id=${todo.id}`;
+
         // create a html list item
         const listItem = document.createElement('li');
 
         // add the content - title of the todo item to the html list item
         listItem.textContent = todo.title;
 
+        anchor.appendChild(listItem);
+
         // append the list item to the unordered list
-        ulist.appendChild(listItem);
+        ulist.appendChild(anchor);
     });
 
     // after exiting the loop, append the unordered list to the html todoList div
     todoList.appendChild(ulist);
+    console.log(ulist);
 }
 
 loadTodos();
