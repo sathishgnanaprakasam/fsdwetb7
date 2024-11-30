@@ -66,3 +66,169 @@ createList(data, type=unoredered) -> List created using DOM manipulation
 - filname: .js
 - import: import
 - export: export
+
+### npm install
+
+- The `npm install` command is used to install dependencies for a JavaScript project.
+- It installs the dependencies listed in the `package.json` file.
+- Example: `npm install react` - Installs the React library.
+
+### npm uninstall
+
+- The `npm uninstall` command is used to uninstall dependencies from a JavaScript project.
+- It removes the dependencies listed in the `package.json` file.
+- Example: `npm uninstall react` - Uninstalls the React library.
+
+### npm install --save-dev
+
+- The `npm install --save-dev` command is used to install development dependencies for a JavaScript project.
+- Development dependencies are used during the development of the project but are not required for production.
+- Example: `npm install --save-dev eslint` - Installs the ESLint library as a development dependency.
+
+### npm uninstall --save-dev
+
+- The `npm uninstall --save-dev` command is used to uninstall development dependencies from a JavaScript project.
+- It removes the development dependencies listed in the `package.json` file.
+- Example: `npm uninstall --save-dev eslint` - Uninstalls the ESLint library as a development dependency.
+
+### single page application (SPA)
+
+- A single-page application (SPA) is a web application that loads a single HTML page and dynamically updates the content of the page as the user interacts with the application.
+
+### Setting up react project from scratch without using vite or create-react-app
+
+- Create a new directory for the project.
+- Run `npm init` to create a `package.json` file.
+- Run `npm install react react-dom` to install React and ReactDOM.
+- Create an `index.html` file with a root element to render the React app.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
+```
+
+- Create an `index.js` file to render the React app.
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+
+// React component
+const App = () => {
+  return <h1>Hello, React!</h1>;
+};
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+```
+
+- Create a `src` directory and add the `index.js` file.
+- package.json using babel and webpack
+
+```json
+{
+  "name": "fsdwetb7",
+  "version": "1.0.0",
+  "description": "an example npm application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sathishgnanaprakasam/fsdwetb7.git"
+  },
+  "author": "Sathish Gnanaprakasam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sathishgnanaprakasam/fsdwetb7/issues"
+  },
+  "homepage": "https://github.com/sathishgnanaprakasam/fsdwetb7#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "babel-loader": "^8.4.1",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.0.0"
+  }
+}
+```
+
+- Create a `webpack.config.js` file to configure Webpack.
+
+```js
+import path from "path";
+import { fileURLToPath } from "url";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default {
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    clean: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+    ],
+  },
+  resolve: {
+    extensions: [".js", ".jsx"],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+  ],
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    compress: true,
+    port: 3000,
+  },
+};
+```
+
+- Create a `.babelrc` file to configure Babel.
+
+```json
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+```
+
+- Run `npm install` to install the dependencies.
+- Run `npm start` to start the development server.
+- Open `http://localhost:3000` in the browser to view the React app.
