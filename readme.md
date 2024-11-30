@@ -49,3 +49,20 @@ createList(data, type=unoredered) -> List created using DOM manipulation
 - It contains information about the project, such as the project name, version, dependencies, scripts, etc.
 - It is used to manage the project dependencies and scripts.
 - It is created automatically when you run the `npm init` command.
+
+### Common JS VS ES Modules
+
+- package.json: "type": "commonjs"
+- filname: .js
+- import: require()
+- export: module.exports
+
+- package.json: "type": "module"
+- filname: .cjs
+- import: require()
+- export: module.exports
+
+- package.json: "type": "module"
+- filname: .js
+- import: import
+- export: export
