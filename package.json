@@ -1,0 +1,21 @@
+{
+  "name": "fsdwetb7",
+  "version": "1.0.0",
+  "description": "an example npm application",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js",
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sathishgnanaprakasam/fsdwetb7.git"
+  },
+  "author": "Sathish Gnanaprakasam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sathishgnanaprakasam/fsdwetb7/issues"
+  },
+  "homepage": "https://github.com/sathishgnanaprakasam/fsdwetb7#readme"
+}
