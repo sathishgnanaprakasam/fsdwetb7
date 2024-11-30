@@ -2,11 +2,11 @@
   "name": "fsdwetb7",
   "version": "1.0.0",
   "description": "an example npm application",
-  "main": "main.cjs",
+  "main": "main.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.cjs",
+    "start": "node main.js",
     "dev": "node index.js"
   },
   "repository": {
