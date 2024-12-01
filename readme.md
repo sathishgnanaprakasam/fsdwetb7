@@ -249,3 +249,12 @@ export default {
 - **gitignore**: Contains the files and directories to be ignored by Git.
 - **eslint.config.js**: Contains the configuration for ESLint.
 - **vite.config.js**: Contains the configuration for Vite.
+
+## component in react
+
+- A component is a reusable piece of code that defines the structure and behavior of a part of a user interface.
+
+## What is JSX?
+
+- JSX stands for JavaScript XML.
+- It is an extension of JavaScript that allows you to write HTML-like code in JavaScript.
