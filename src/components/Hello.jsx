@@ -1,16 +1,18 @@
 import Description from "./Description";
 import Header from "./Header";
 
-const Hello = ({ user }) => {
+const Hello = () => {
+
+    const getData = (data) => {
+        console.log(data);
+    }
 
     return (
         <>
             <Header
-                user={user}
+                getData={getData}
             />
-            <Description
-                user={user}
-            />
+            <Description />
         </>
     )
 }

@@ -268,3 +268,5 @@ export default {
 ## Props drilling in react
 
 - Props drilling is the process of passing props from a parent component to a nested child component through multiple levels of components.
+
+## Passing data from child to parent component
