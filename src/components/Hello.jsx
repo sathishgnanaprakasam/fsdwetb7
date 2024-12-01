@@ -1,16 +1,16 @@
 import Description from "./Description";
 import Header from "./Header";
 
-const Hello = () => {
-
-    const user = 'John';
+const Hello = ({ user }) => {
 
     return (
         <>
             <Header
                 user={user}
             />
-            <Description />
+            <Description
+                user={user}
+            />
         </>
     )
 }

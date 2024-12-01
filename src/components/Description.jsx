@@ -1,5 +1,5 @@
-const Description = () => {
-    return <p>I am saying Hello to the World!</p>
+const Description = ({ user }) => {
+    return <p>I am saying Hello to {user}!</p>
 }
 
 export default Description;

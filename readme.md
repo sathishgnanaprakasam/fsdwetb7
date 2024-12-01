@@ -258,3 +258,13 @@ export default {
 
 - JSX stands for JavaScript XML.
 - It is an extension of JavaScript that allows you to write HTML-like code in JavaScript.
+
+## Passing props from parent to child component
+
+- Props are used to pass data from a parent component to a child component in React.
+- Props are read-only and cannot be modified by the child component.
+- Props are passed as attributes to the child component.
+
+## Props drilling in react
+
+- Props drilling is the process of passing props from a parent component to a nested child component through multiple levels of components.
