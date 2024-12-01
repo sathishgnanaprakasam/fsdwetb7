@@ -1,5 +1,13 @@
+import Description from "./Description";
+import Header from "./Header";
+
 const Hello = () => {
-    return <h1>Hello World!</h1>;
+    return (
+        <>
+            <Header />
+            <Description />
+        </>
+    )
 }
 
 export default Hello;
