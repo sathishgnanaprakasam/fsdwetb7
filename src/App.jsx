@@ -1,7 +1,4 @@
-const Hello = () => {
-    return <h1>Hello World!</h1>;
-}
-
+import Hello from './components/Hello';
 
 function App() {
     return (
