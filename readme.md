@@ -1,10 +1,10 @@
 - [x] What is NPM?
-- [ ] Understanding NPM packages
-- [ ] What is React?
-- [ ] What is Single page application (SPA)?
-- [ ] Library vs framework
-- [ ] Setting up react project using Vite
-- [ ] Understanding React folder skeleton
+- [x] Understanding NPM packages
+- [x] What is React?
+- [x] What is Single page application (SPA)?
+- [x] Library vs framework
+- [x] Setting up react project using Vite
+- [x] Understanding React folder skeleton
 
 ## What is NPM?
 
@@ -232,3 +232,20 @@ export default {
 - Run `npm install` to install the dependencies.
 - Run `npm start` to start the development server.
 - Open `http://localhost:3000` in the browser to view the React app.
+
+### Understanding React folder skeleton
+
+- **src**: Contains the source code of the React application.
+- **public**: Contains the public assets of the React application.
+- **node_modules**: Contains the dependencies of the React application.
+- **package.json**: Contains the metadata and dependencies of the React application.
+- **webpack.config.js**: Contains the configuration for Webpack.
+- **.babelrc**: Contains the configuration for Babel.
+- **index.html**: The main HTML file of the React application.
+- **index.js**: The entry point of the React application.
+- **App.jsx**: The main component of the React application.
+- **styles.css**: The CSS file for styling the React application.
+- **assets**: Contains the images, fonts, and other assets of the React application.
+- **gitignore**: Contains the files and directories to be ignored by Git.
+- **eslint.config.js**: Contains the configuration for ESLint.
+- **vite.config.js**: Contains the configuration for Vite.
