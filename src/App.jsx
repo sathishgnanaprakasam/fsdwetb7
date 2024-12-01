@@ -1,6 +1,15 @@
-// This is a simple React component
+const Hello = () => {
+    return <h1>Hello World!</h1>;
+}
+
+
 function App() {
-    return <h1>Hello World!</h1>
+    return (
+        <>
+            <Hello />
+            <Hello />
+        </>
+    )
 }
 
 export default App;
