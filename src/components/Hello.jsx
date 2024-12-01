@@ -2,9 +2,14 @@ import Description from "./Description";
 import Header from "./Header";
 
 const Hello = () => {
+
+    const user = 'John';
+
     return (
         <>
-            <Header />
+            <Header
+                user={user}
+            />
             <Description />
         </>
     )

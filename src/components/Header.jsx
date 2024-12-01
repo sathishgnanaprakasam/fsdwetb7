@@ -1,5 +1,6 @@
-const Header = () => {
-    return <h1>Hello World!</h1>;
+const Header = ({ user }) => {
+
+    return <h1>Hello {user}!</h1>;
 }
 
 export default Header;
