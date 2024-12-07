@@ -1,15 +1,12 @@
-// const App = () => {
-//     return <h1>Hello, React!</h1>
-// }
+import Header from "./components/Header";
 
-// export default App;
+const App = () => {
 
-import React from "react";
-
-class App extends React.Component {
-    render() {
-        return <h1>Hello, React!</h1>
-    }
+    return (
+        <>
+            <Header />
+        </>
+    )
 }
 
 export default App;
