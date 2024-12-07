@@ -1,12 +1,15 @@
 import Header from "./components/Header";
 
 const App = () => {
-    const time = new Date().toLocaleTimeString();
+
+    const getTime = (time) => {
+        console.log(time);
+    }
 
     return (
         <div>
             <Header
-                time={time}
+                getTime={getTime}
             />
         </div>
     )

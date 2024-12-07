@@ -1,9 +1,11 @@
-const Header = (props) => {
-    console.log(props.time);
+const Header = ({ getTime }) => {
+    const time = new Date().toLocaleTimeString();
+
+    getTime(time);
 
     return (
         <div>
-            <h1>{props.time}</h1>
+            <h1>Hello World!</h1>
         </div>
     )
 }
