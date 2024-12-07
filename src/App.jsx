@@ -1,12 +1,15 @@
-import Hello from './components/Hello';
+// const App = () => {
+//     return <h1>Hello, React!</h1>
+// }
 
-function App() {
+// export default App;
 
-    return (
-        <>
-            <Hello />
-        </>
-    )
+import React from "react";
+
+class App extends React.Component {
+    render() {
+        return <h1>Hello, React!</h1>
+    }
 }
 
 export default App;
