@@ -1,5 +1,11 @@
-const Header = () => {
-    return <h1>Hello, React!</h1>
+const Header = (props) => {
+    console.log(props.time);
+
+    return (
+        <div>
+            <h1>{props.time}</h1>
+        </div>
+    )
 }
 
 export default Header;

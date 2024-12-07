@@ -1,11 +1,14 @@
 import Header from "./components/Header";
 
 const App = () => {
+    const time = new Date().toLocaleTimeString();
 
     return (
-        <>
-            <Header />
-        </>
+        <div>
+            <Header
+                time={time}
+            />
+        </div>
     )
 }
 
