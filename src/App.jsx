@@ -2,32 +2,18 @@ import { useState } from "react";
 
 const App = () => {
 
-    let [count, setCount] = useState(0);
-
-    const handleIncrease = () => {
-        setCount(count + 1);
-    }
-
-    const handleDecrease = () => {
-        setCount(count - 1);
-    }
-
-    const handleReset = () => {
-        setCount(0);
-    }
-
-    // runs on every component render
-    console.log(count);
+    const [likes, setLikes] = useState(0);
+    const [dislikes, setDislikes] = useState(0);
 
     return (
         <div>
-            <div>
-                <button onClick={handleDecrease}>-</button> {count} <button onClick={handleIncrease}>+</button>
-            </div>
-            <br />
-            <div>
-                <button onClick={handleReset}>Reset</button>
-            </div>
+            <button onClick={() => setLikes(likes + 1)}><span className="material-symbols-outlined">
+                thumb_up
+            </span> {likes} </button>
+            &nbsp;&nbsp;&nbsp;
+            <button onClick={() => setDislikes(dislikes + 1)}><span className="material-symbols-outlined">
+                thumb_down
+            </span> {dislikes} </button>
         </div>
     )
 }
