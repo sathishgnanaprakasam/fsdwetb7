@@ -1,49 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const App = () => {
 
-    const [reactions, setReactions] = useState({
-        likes: 0,
-        dislikes: 0
+    const [like, setLike] = useState(0);
+    const [dislike, setDislike] = useState(0);
+
+    useEffect(() => {
+        console.log('This will run only once when the component renders for the first time');
+    }, []);
+
+    useEffect(() => {
+        console.log('This will run when the component renders and for any state changes and all the re-renders');
     });
 
-    const [log, setLog] = useState([]);
-
-    console.log(log);
-
-    const handleLike = () => {
-        setReactions({
-            ...reactions,
-            likes: reactions.likes + 1
-        });
-        setLog([...log, 'Like']);
-    }
-
-    const handleDislike = () => {
-        setReactions({
-            ...reactions,
-            dislikes: reactions.dislikes + 1
-        });
-        setLog([...log, 'Dislike']);
-    }
+    useEffect(() => {
+        console.log('This will run when the component renders and on every state change of "like" state');
+    }, [like]);
 
     return (
         <div>
-            <button onClick={handleLike}><span className="material-symbols-outlined">
-                thumb_up
-            </span> {reactions.likes} </button>
-            &nbsp;&nbsp;&nbsp;
-            <button onClick={handleDislike}><span className="material-symbols-outlined">
-                thumb_down
-            </span> {reactions.dislikes} </button>
-            <br /><br />
-            <div>
-                <ul>
-                    {
-                        log.map((reaction, index) => <li key={index}>{reaction}</li>)
-                    }
-                </ul>
-            </div>
+            <button onClick={() => setLike(like + 1)}>
+                <span className="material-symbols-outlined">
+                    thumb_up
+                </span> {like}
+            </button>
+            <button onClick={() => setDislike(dislike + 1)}>
+                <span className="material-symbols-outlined">
+                    thumb_down
+                </span> {dislike}
+            </button>
         </div>
     )
 }

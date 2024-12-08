@@ -14,7 +14,7 @@
 
 - [x] What is React Hooks?
 - [x] Why it is required to use React Hooks?
-- [x] UseState , useEffect --pending
+- [x] UseState , useEffect
 - [ ] API calling using useEffect
 - [ ] Rendering API data in to JSX
 - [ ] Keys in Array
@@ -40,3 +40,8 @@
 
 - state is a variable that holds data that can change over time. It is a local variable that is specific to a component.
 - state is a component's memory.
+
+### useEffect
+
+- useEffect is a built-in React Hook that allows you to perform side effects in a functional component.
+- useEffect is a lifecycle method that is called when a component mounts, updates, or unmounts.
