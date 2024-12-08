@@ -38,7 +38,11 @@ const App = () => {
             </span> {reactions.dislikes} </button>
             <br /><br />
             <div>
-                
+                <ul>
+                    {
+                        log.map((reaction, index) => <li key={index}>{reaction}</li>)
+                    }
+                </ul>
             </div>
         </div>
     )
