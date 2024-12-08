@@ -14,7 +14,7 @@
 
 - [x] What is React Hooks?
 - [x] Why it is required to use React Hooks?
-- [ ] UseState , useEffect
+- [x] UseState , useEffect --pending
 - [ ] API calling using useEffect
 - [ ] Rendering API data in to JSX
 - [ ] Keys in Array

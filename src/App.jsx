@@ -7,15 +7,39 @@ const App = () => {
         dislikes: 0
     });
 
+    const [log, setLog] = useState([]);
+
+    console.log(log);
+
+    const handleLike = () => {
+        setReactions({
+            ...reactions,
+            likes: reactions.likes + 1
+        });
+        setLog([...log, 'Like']);
+    }
+
+    const handleDislike = () => {
+        setReactions({
+            ...reactions,
+            dislikes: reactions.dislikes + 1
+        });
+        setLog([...log, 'Dislike']);
+    }
+
     return (
         <div>
-            <button onClick={() => setReactions({ ...reactions, likes: reactions.likes + 1 })}><span className="material-symbols-outlined">
+            <button onClick={handleLike}><span className="material-symbols-outlined">
                 thumb_up
             </span> {reactions.likes} </button>
             &nbsp;&nbsp;&nbsp;
-            <button onClick={() => setReactions({ ...reactions, dislikes: reactions.dislikes + 1 })}><span className="material-symbols-outlined">
+            <button onClick={handleDislike}><span className="material-symbols-outlined">
                 thumb_down
             </span> {reactions.dislikes} </button>
+            <br /><br />
+            <div>
+                
+            </div>
         </div>
     )
 }
