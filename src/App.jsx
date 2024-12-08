@@ -1,16 +1,12 @@
-import Header from "./components/Header";
+import ChildComponent from "./components/ChildComponent";
 
 const App = () => {
-
-    const getTime = (time) => {
-        console.log(time);
-    }
-
     return (
         <div>
-            <Header
-                getTime={getTime}
-            />
+            <h1>Parent Component</h1>
+            <ChildComponent>
+                <p>This UI renders inside the child component!</p>
+            </ChildComponent>
         </div>
     )
 }
