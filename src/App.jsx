@@ -1,12 +1,20 @@
-import ChildComponent from "./components/ChildComponent";
+import { useState } from "react";
 
 const App = () => {
+
+    let [count, setCount] = useState(0);
+
+    const handleIncrease = () => {
+        setCount(count + 1);
+    }
+
+    // runs on every component render
+    console.log(count);
+
     return (
         <div>
-            <h1>Parent Component</h1>
-            <ChildComponent>
-                <p>This UI renders inside the child component!</p>
-            </ChildComponent>
+            <h1>Counter: {count}</h1>
+            <button onClick={handleIncrease}>Increase</button>
         </div>
     )
 }
