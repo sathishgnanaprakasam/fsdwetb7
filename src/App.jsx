@@ -10,15 +10,18 @@ const reducer = (state, action) => {
     switch (action.type) {
         case 'PLUS':
             return {
-                count: state.count + 1
+                count: state.count + 1,
+                history: [...state.history, 'PLUS']
             }
         case 'MINUS':
             return {
-                count: state.count - 1
+                count: state.count - 1,
+                history: [...state.history, 'MINUS']
             }
         case 'RESET':
             return {
-                count: 0
+                count: 0,
+                history: [...state.history, 'RESET']
             }
         default:
             return state;
@@ -35,6 +38,11 @@ const App = () => {
             <button onClick={() => dispatch({ type: "PLUS" })}>Increase</button>
             <button onClick={() => dispatch({ type: "MINUS" })}>Decrease</button>
             <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
+
+            <h2>History</h2>
+            {
+                state.history.join(', ')
+            }
         </div>
     )
 }
