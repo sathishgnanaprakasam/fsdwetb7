@@ -1,40 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const App = () => {
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    let count = 0;
+    const [updated, setUpdated] = useState(0);
 
-    const handleLogin = (e) => {
-        e.preventDefault();
-
-        console.log(email, password);
-
-        // reset the form
-        setEmail('');
-        setPassword('');
+    const handleIncrease = () => {
+        count++;
+        setUpdated(updated + 1);
     }
+
+    useEffect(() => {
+        console.log(count);
+    }, [updated]);
 
     return (
         <div>
-            <form onSubmit={handleLogin}>
-                <h1>Login</h1>
-                <input
-                    type="email"
-                    placeholder="Email..."
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-
-                <input
-                    type="password"
-                    placeholder="Password..."
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-
-                <button type="submit">Sign In</button>
-            </form>
+            <h1>Count: {updated}</h1>
+            <button onClick={handleIncrease}>Increase</button>
         </div>
     )
 }
