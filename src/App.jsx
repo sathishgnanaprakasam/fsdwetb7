@@ -1,18 +1,28 @@
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 
 const intialState = {
-    count: 0
+    count: 0,
+    history: []
 };
 
 const reducer = (state, action) => {
 
-    if (action.type === 'PLUS') {
-        return {
-            count: state.count + 1
-        }
+    switch (action.type) {
+        case 'PLUS':
+            return {
+                count: state.count + 1
+            }
+        case 'MINUS':
+            return {
+                count: state.count - 1
+            }
+        case 'RESET':
+            return {
+                count: 0
+            }
+        default:
+            return state;
     }
-
-    return state;
 }
 
 const App = () => {
@@ -23,6 +33,8 @@ const App = () => {
         <div>
             <h1>Count: {state.count}</h1>
             <button onClick={() => dispatch({ type: "PLUS" })}>Increase</button>
+            <button onClick={() => dispatch({ type: "MINUS" })}>Decrease</button>
+            <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
         </div>
     )
 }
