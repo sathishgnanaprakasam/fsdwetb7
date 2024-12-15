@@ -7,6 +7,7 @@ const App = () => {
 
     return (
         <div>
+            <h1>Reactions: { }</h1>
             <Like />
             <Dislike />
         </div>
