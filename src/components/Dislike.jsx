@@ -1,4 +1,12 @@
-const Dislike = ({ dislikes, handleDislike }) => {
+import { useCallback, useState } from "react";
+
+const Dislike = () => {
+
+    const [dislikes, setDislikes] = useState(0);
+
+    const handleDislike = useCallback(() => {
+        setDislikes(dislikes + 1);
+    }, [dislikes]);
 
     console.log('Rendering Dislike...');
 
