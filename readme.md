@@ -1,47 +1,30 @@
-# Doubts:
+# Day 27: React Hooks
 
 ## Topics:
 
-- [x] Children Props
+- [x] useRef
+- [x] useReducer
+- [ ] useMemo
+- [ ] useCallback
 
-### Children Props
+### useRef
 
-- It is a property that is passed to a component as a prop. The children prop is used to pass content to a component.
+- The useRef Hook allows you to persist values between renders.
+- It can be used to store a mutable value that does not cause a re-render when updated.
+- It can be accessed with the current property: `ref.current`
+- It can be used to access a DOM element directly: `ref.current`
 
-# Day - 26: React Hooks
+### useReducer
 
-## Contents
+- The useReducer Hook allows you to manage state in a functional component.
+- It takes a reducer function and an initial state value as arguments.
 
-- [x] What is React Hooks?
-- [x] Why it is required to use React Hooks?
-- [x] UseState , useEffect
-- [x] API calling using useEffect
-- [x] Rendering API data in to JSX
-- [x] Keys in Array
-- [x] React Forms
+### useState Vs useReducer
 
-### What is React Hooks?
+- useState is to manage simple state, useReducer is to manage complex state.
 
-- React Hooks are a set of functions that allow you to use state and other features(like React lifecycle methods) without writing a class.
-- React Hooks introduced in React v16.8.0.
-- Earlier we used class components to create a component. But now we can use functional components to create a component.
-- Functional components are more efficient than class components.
-- Functional components are easier to test and debug.
+### useCallback
 
-### Why it is required to use React Hooks?
-
-- React Hooks are required to use state and other features(like React lifecycle methods) without writing a class.
-
-### useState
-
-- useState is a built-in React Hook that allows you to manage state in a functional component.
-
-### state
-
-- state is a variable that holds data that can change over time. It is a local variable that is specific to a component.
-- state is a component's memory.
-
-### useEffect
-
-- useEffect is a built-in React Hook that allows you to perform side effects in a functional component.
-- useEffect is a lifecycle method that is called when a component mounts, updates, or unmounts.
+- The useCallback Hook allows you to memoize (meaning: to remember) a function so that it's only re-created when one of its dependencies has changed.
+- It returns a memoized version of the callback that only changes if one of the dependencies has changed.
+- We use it 
