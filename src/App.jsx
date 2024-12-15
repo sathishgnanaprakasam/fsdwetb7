@@ -1,20 +1,8 @@
-import { useMemo } from "react";
-
 const App = () => {
-
-    const largeSum = useMemo(() => {
-        console.log('Calculating sum...');
-        let sum = 0;
-        for (let i = 0; i < 10000000000; i++) {
-            sum += i;
-        }
-        return sum;
-    }, []);
-
-    console.log(largeSum);
-
     return (
-        <div>App</div>
+        <div>
+            <h1 className="text-3xl font-bold text-green-700 text-center my-4">Hello World!</h1>
+        </div>
     )
 }
 
