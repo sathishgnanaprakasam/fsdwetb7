@@ -35,3 +35,7 @@
 - The parent component passes down the state to the child component, and the child component can access the state through props.
 - We first need to create a state in the parent component, and then pass it down to the child component as props.
 - We can also use a callback function to update the state in the parent component, and pass it down to the child component as props.
+
+### useMemo
+
+- The useMemo Hook allows you to memoize (meaning: to remember) a value so that it's only re-computed when its dependencies have changed.

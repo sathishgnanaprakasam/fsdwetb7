@@ -1,34 +1,21 @@
-import Like from "./components/Like";
-import Dislike from "./components/Dislike";
-import { useState } from "react";
-
+import { useMemo } from "react";
 
 const App = () => {
 
-    const [likes, setLikes] = useState(0);
-    const [dislikes, setDislikes] = useState(0);
+    const largeSum = useMemo(() => {
+        console.log('Calculating sum...');
+        let sum = 0;
+        for (let i = 0; i < 10000000000; i++) {
+            sum += i;
+        }
+        return sum;
+    }, []);
 
-    const onLike = (like) => {
-        setLikes(like);
-    }
-
-    const onDislike = (dislike) => {
-        setDislikes(dislike);
-    }
-
-    console.log('Rendering App...');
+    console.log(largeSum);
 
     return (
-        <div>
-            <h1>Reactions: {likes + dislikes}</h1>
-            <Like
-                onLike={onLike}
-            />
-            <Dislike
-                onDislike={onDislike}
-            />
-        </div>
+        <div>App</div>
     )
 }
 
-export default App
+export default App;
