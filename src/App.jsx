@@ -1,22 +1,19 @@
-import { useRef } from "react";
+import { useCallback, useState } from "react"
 
 const App = () => {
 
-    const inputRef = useRef(null);
+    const [count, setCount] = useState(0);
 
-    const handleSubmit = () => {
-        console.log(inputRef.current.value);
-    }
+    const handleIncrement = useCallback(() => {
+        setCount(count + 1);
+    }, [count]);
 
     return (
         <div>
-            <input
-                type="text"
-                ref={inputRef}
-            />
-            <button onClick={handleSubmit}>Submit</button>
+            <h1>Count: {count}</h1>
+            <button onClick={handleIncrement}>Increment</button>
         </div>
     )
 }
 
-export default App;
+export default App
