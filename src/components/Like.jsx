@@ -1,12 +1,13 @@
 import { useCallback, useState } from "react";
 
-const Like = () => {
+const Like = ({ onLike }) => {
 
     const [likes, setLikes] = useState(0);
 
-    const handleLike = useCallback(() => {
-        setLikes(likes + 1);
-    }, [likes]);
+    const handleLike = () => {
+        setLikes(likes + 1); // asynchronous
+        onLike(likes + 1);
+    };
 
     console.log('Rendering Like...');
 

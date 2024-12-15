@@ -1,12 +1,13 @@
 import { useCallback, useState } from "react";
 
-const Dislike = () => {
+const Dislike = ({ onDislike }) => {
 
     const [dislikes, setDislikes] = useState(0);
 
-    const handleDislike = useCallback(() => {
+    const handleDislike = () => {
         setDislikes(dislikes + 1);
-    }, [dislikes]);
+        onDislike(dislikes + 1);
+    }
 
     console.log('Rendering Dislike...');
 

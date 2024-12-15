@@ -27,4 +27,11 @@
 
 - The useCallback Hook allows you to memoize (meaning: to remember) a function so that it's only re-created when one of its dependencies has changed.
 - It returns a memoized version of the callback that only changes if one of the dependencies has changed.
-- We use it 
+
+### Lifting the state up
+
+- Lifting the state up is a technique used in React to pass state up from child components to parent components.
+- It allows you to share state between components that are not directly related.
+- The parent component passes down the state to the child component, and the child component can access the state through props.
+- We first need to create a state in the parent component, and then pass it down to the child component as props.
+- We can also use a callback function to update the state in the parent component, and pass it down to the child component as props.
