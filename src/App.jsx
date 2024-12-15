@@ -1,4 +1,6 @@
 import { useCallback, useState } from "react"
+import Like from "./components/Like";
+import Dislike from "./components/Dislike";
 
 const App = () => {
 
@@ -13,13 +15,18 @@ const App = () => {
         setDislikes(dislikes + 1);
     }, [dislikes]);
 
+    console.log('Rendering App...');
 
     return (
         <div>
-            <h1>likes: {likes}</h1>
-            <button onClick={handleLike}>Like</button>
-            <h1>dislikes: {dislikes}</h1>
-            <button onClick={handleDislike}>Dislike</button>
+            <Like
+                likes={likes}
+                handleLike={handleLike}
+            />
+            <Dislike
+                dislikes={dislikes}
+                handleDislike={handleDislike}
+            />
         </div>
     )
 }
