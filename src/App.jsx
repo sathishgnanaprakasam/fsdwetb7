@@ -1,46 +1,32 @@
-import { useEffect, useState } from "react";
-import "./App.css";
+import { createBrowserRouter } from "react-router";
+import { RouterProvider } from "react-router";
+
 
 const App = () => {
 
-    const [products, setProducts] = useState([]);
+    const routes = [
+        {
+            path: "/",
+            element: <h1>Hello World!</h1>
+        },
+    ];
 
-    useEffect(() => {
-        fetch(`https://fakestoreapi.com/products`, {
-            method: 'GET'
-        })
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                setProducts(data);
-            })
-    }, []);
+    const router = createBrowserRouter(routes, {
+        future: {
+            v7_relativeSplatPath: true,
+            v7_fetcherPersist: true,
+            v7_normalizeFormMethod: true,
+            v7_partialHydration: true,
+            v7_skipActionErrorRevalidation: true,
+        }
+    });
 
-    useEffect(() => {
-        console.log(products);
-    }, [products]);
-
-    return (
-        <div>
-            <h1>Products</h1>
-            <div className="products">
-                {
-                    products.map(product => (
-                        <div key={product.id}>
-                            <h2 onClick={() => console.log(product.title, product.id)}>{product.title}</h2>
-                            <p>{product.description}</p>
-                            <p>{product.price}</p>
-                            <img src={product.image} alt={product.title}
-                                style={{ width: '100px', height: '100px' }}
-                            />
-                            <hr />
-                        </div>
-                    ))
-                }
-            </div>
-        </div>
-    )
+    return <RouterProvider
+        router={router}
+        future={{
+            v7_startTransition: true,
+        }}
+    />
 }
 
 export default App;
