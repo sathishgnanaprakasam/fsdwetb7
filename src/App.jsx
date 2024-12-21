@@ -4,6 +4,10 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Layout from "./wrappers/Layout";
+import DashboardLayout from "./wrappers/DashboardLayout";
+import Dashboard from "./pages/Dashboard";
+import Users from "./pages/Users";
+import Settings from "./pages/Settings";
 
 
 const App = () => {
@@ -18,12 +22,30 @@ const App = () => {
                     element: <Home />
                 },
                 {
-                    path: "/register",
+                    path: "register",
                     element: <Register />
                 },
                 {
-                    path: "/login",
+                    path: "login",
                     element: <Login />
+                },
+                {
+                    path: "dashboard",
+                    element: <DashboardLayout />,
+                    children: [
+                        {
+                            path: "",
+                            element: <Dashboard />
+                        },
+                        {
+                            path: "users",
+                            element: <Users />
+                        },
+                        {
+                            path: "settings",
+                            element: <Settings />
+                        }
+                    ]
                 }
             ]
         }
