@@ -2,7 +2,7 @@
 
 ## Topics:
 
-- [ ] React Router V6
+- [x] React Router V6
 
 ### React Router
 
