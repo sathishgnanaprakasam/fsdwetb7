@@ -1,16 +1,8 @@
-import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router";
 
 const Users = () => {
 
-    const [users, setUsers] = useState([]);
-
-    useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/users`)
-            .then(response => response.json())
-            .then(data => setUsers(data));
-    }, []);
-
-    console.log(users);
+    const users = useLoaderData();
 
     return (
         <div>

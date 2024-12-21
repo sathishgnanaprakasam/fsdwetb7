@@ -8,6 +8,7 @@ import DashboardLayout from "./wrappers/DashboardLayout";
 import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import Settings from "./pages/Settings";
+import usersLoader from "./loaders/unit/usersLoader";
 
 
 const App = () => {
@@ -39,7 +40,9 @@ const App = () => {
                         },
                         {
                             path: "users",
-                            element: <Users />
+                            element: <Users />,
+                            loader: usersLoader,
+                            hydrateFallbackElement: <div>Loading...</div>
                         },
                         {
                             path: "settings",
