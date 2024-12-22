@@ -1,9 +1,8 @@
-import axios from "axios";
-import instance from "../../services/instance";
+import userServices from "../../services/userServices";
 
 const usersLoader = async () => {
     try {
-        const response = await instance.get(`/users`);
+        const response = await userServices.getUsers();
 
         return response.data;
     } catch (error) {
