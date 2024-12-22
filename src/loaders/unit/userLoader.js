@@ -1,8 +1,9 @@
+import axios from "axios";
+
 const userLoader = async ({ params }) => {
     try {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
-        const user = await response.json();
-        return user;
+        const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${params.id}`);
+        return response.data;
     } catch (error) {
         return {};
     }
