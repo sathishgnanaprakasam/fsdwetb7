@@ -4,4 +4,5 @@
     grid-template-rows: 1fr;
     grid-template-areas: "sidebar main";
     height: 100vh;
+    gap: 30px;
 }
