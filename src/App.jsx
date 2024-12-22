@@ -44,14 +44,13 @@ const App = () => {
                             path: "users",
                             element: <Users />,
                             loader: usersLoader,
-                            hydrateFallbackElement: <div>Loading...</div>,
-                            children: [
-                                {
-                                    path: "user/:id",
-                                    element: <User />,
-                                    loader: userLoader,
-                                }
-                            ]
+                            hydrateFallbackElement: <div>Loading...</div>
+                        },
+                        {
+                            path: "user/:id",
+                            element: <User />,
+                            loader: userLoader,
+                            hydrateFallbackElement: <div>Loading...</div>
                         },
                         {
                             path: "settings",

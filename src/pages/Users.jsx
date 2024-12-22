@@ -11,14 +11,13 @@ const Users = () => {
                 {users.map(user => (
                     <li key={user.id}>
                         <Link
-                            to={`/dashboard/users/user/${user.id}`}
+                            to={`/dashboard/user/${user.id}`}
                         >
                             {user.name}
                         </Link>
                     </li>
                 ))}
             </ul>
-            <hr />
             <Outlet />
         </div>
     )
