@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import Settings from "./pages/Settings";
 import usersLoader from "./loaders/unit/usersLoader";
+import Test from "./components/Test";
 
 
 const App = () => {
@@ -29,6 +30,10 @@ const App = () => {
                 {
                     path: "login",
                     element: <Login />
+                },
+                {
+                    path: "test",
+                    element: <Test />
                 },
                 {
                     path: "dashboard",
