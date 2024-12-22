@@ -9,7 +9,8 @@ import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import Settings from "./pages/Settings";
 import usersLoader from "./loaders/unit/usersLoader";
-import Test from "./components/Test";
+import User from "./components/User";
+import userLoader from "./loaders/unit/userLoader";
 
 
 const App = () => {
@@ -32,10 +33,6 @@ const App = () => {
                     element: <Login />
                 },
                 {
-                    path: "test",
-                    element: <Test />
-                },
-                {
                     path: "dashboard",
                     element: <DashboardLayout />,
                     children: [
@@ -47,7 +44,14 @@ const App = () => {
                             path: "users",
                             element: <Users />,
                             loader: usersLoader,
-                            hydrateFallbackElement: <div>Loading...</div>
+                            hydrateFallbackElement: <div>Loading...</div>,
+                            children: [
+                                {
+                                    path: "user/:id",
+                                    element: <User />,
+                                    loader: userLoader,
+                                }
+                            ]
                         },
                         {
                             path: "settings",
