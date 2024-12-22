@@ -1,8 +1,10 @@
-import { useOutletContext, useParams } from "react-router";
+import { useOutletContext } from "react-router";
+import { useSearchParams } from "react-router-dom";
 
 const User = () => {
 
-    const { id } = useParams();
+    const [searchParams, setSearchParams] = useSearchParams();
+    const id = searchParams.get("id");
     const users = useOutletContext();
     const user = users.find(user => user.id === parseInt(id));
 

@@ -10,8 +10,6 @@ import Users from "./pages/Users";
 import Settings from "./pages/Settings";
 import usersLoader from "./loaders/unit/usersLoader";
 import User from "./components/User";
-import userLoader from "./loaders/unit/userLoader";
-
 
 const App = () => {
 
@@ -47,8 +45,8 @@ const App = () => {
                             hydrateFallbackElement: <div>Loading...</div>,
                             children: [
                                 {
-                                    path: "user/:id",
-                                    element: <User />,
+                                    path: "user",
+                                    element: <User />
                                 },
                             ]
                         },
